@@ -1,0 +1,394 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Drug Recommendation System</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f7ff;
+  color: #24364b;
+  line-height: 1.6;
+}
+
+header {
+  background: #1455b8;
+  color: white;
+  padding: 25px 15px;
+  text-align: center;
+}
+
+nav {
+  background: #0d3676;
+  padding: 14px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #b9dcff;
+}
+
+section {
+  max-width: 1000px;
+  margin: 25px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px #cbdcf0;
+}
+
+h2 {
+  color: #1455b8;
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 12px;
+}
+
+.hero {
+  text-align: center;
+  padding: 55px 25px;
+  background: #dbeafe;
+}
+
+.hero h2 {
+  font-size: 32px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  padding: 20px;
+  background: #eff6ff;
+  border-radius: 10px;
+  border: 1px solid #c9defa;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin: 15px 0 6px;
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #9bbbe5;
+  border-radius: 7px;
+  background: white;
+  font-size: 16px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 13px 20px;
+  background: #1455b8;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #0d3676;
+}
+
+#result {
+  margin-top: 20px;
+  padding: 18px;
+  background: #eff6ff;
+  border-left: 5px solid #1455b8;
+  border-radius: 7px;
+}
+
+.notice {
+  margin-top: 18px;
+  padding: 15px;
+  background: #fff4e5;
+  color: #854d0e;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  background: #0d3676;
+  color: white;
+  padding: 25px;
+  margin-top: 35px;
+}
+
+@media (max-width: 600px) {
+  nav a {
+    display: inline-block;
+    margin: 6px;
+  }
+
+  section {
+    margin: 15px;
+    padding: 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>✚ MedAI</h1>
+  <p>AI Drug Recommendation System</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#workflow">Workflow</a>
+  <a href="#demo">Demo</a>
+  <a href="#advantages">Advantages</a>
+  <a href="#conclusion">Conclusion</a>
+</nav>
+
+<section class="hero" id="home">
+  <h2>AI Drug Recommendation System</h2>
+  <p>
+    Exploring how Artificial Intelligence can support healthcare
+    information and clinical decision-making.
+  </p>
+  <p><strong>A simple college project using HTML, CSS and JavaScript.</strong></p>
+</section>
+
+<section id="about">
+  <h2>1. Introduction</h2>
+  <p>
+    An AI Drug Recommendation System is a software concept that uses
+    Artificial Intelligence and Machine Learning techniques to analyze
+    healthcare information and support qualified medical professionals.
+  </p>
+  <p>
+    Such systems may help organize medical information, identify patterns,
+    and highlight safety concerns. They require reliable data and clinical
+    validation before being used in real healthcare.
+  </p>
+</section>
+
+<section>
+  <h2>2. Objectives</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Understand AI</h3>
+      <p>Learn how AI concepts can be applied to healthcare information.</p>
+    </div>
+    <div class="card">
+      <h3>Analyze Data</h3>
+      <p>Understand how computer systems process and classify information.</p>
+    </div>
+    <div class="card">
+      <h3>Improve Safety</h3>
+      <p>Recognize the importance of medication safety and professional review.</p>
+    </div>
+  </div>
+</section>
+
+<section id="workflow">
+  <h2>3. How Does It Work?</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Step 1: Input</h3>
+      <p>Relevant healthcare information is collected with privacy safeguards.</p>
+    </div>
+    <div class="card">
+      <h3>Step 2: Processing</h3>
+      <p>The system organizes and checks the quality of the information.</p>
+    </div>
+    <div class="card">
+      <h3>Step 3: Analysis</h3>
+      <p>An appropriately validated model analyzes relevant data.</p>
+    </div>
+    <div class="card">
+      <h3>Step 4: Review</h3>
+      <p>A qualified healthcare professional reviews the findings.</p>
+    </div>
+  </div>
+</section>
+
+<section id="demo">
+  <h2>4. Interactive Educational Demo</h2>
+  <p>
+    Select a topic and see how this simple educational program
+    classifies sample information. This is not a trained AI model
+    and does not recommend medicines.
+  </p>
+
+  <label for="topic">Choose a sample topic:</label>
+  <select id="topic">
+    <option value="fever">Fever information</option>
+    <option value="headache">Headache information</option>
+    <option value="allergy">Medication allergy safety</option>
+    <option value="interaction">Drug interaction safety</option>
+  </select>
+
+  <label for="profile">Choose a sample profile:</label>
+  <select id="profile">
+    <option value="general">General educational example</option>
+    <option value="allergy">Known allergy needs review</option>
+    <option value="multiple">Multiple medicines need review</option>
+  </select>
+
+  <button type="button" onclick="analyzeData()">
+    Analyze Sample Data
+  </button>
+
+  <div id="result" aria-live="polite">
+    <h3>Demo Result</h3>
+    <p>Select your options and click Analyze Sample Data.</p>
+  </div>
+
+  <div class="notice">
+    <strong>Safety notice:</strong> This educational demo does not diagnose
+    illness, recommend medicines, calculate doses, or check real drug
+    interactions. Consult a qualified healthcare professional for medical
+    decisions. Do not enter personal medical information.
+  </div>
+</section>
+
+<section id="advantages">
+  <h2>5. Advantages</h2>
+  <ul>
+    <li>Can help organize large amounts of healthcare information.</li>
+    <li>Can identify patterns in suitable datasets.</li>
+    <li>May support consistent information retrieval.</li>
+    <li>Can highlight information that needs professional review.</li>
+    <li>Provides a useful area for AI research and learning.</li>
+  </ul>
+
+  <h2 style="margin-top:25px">6. Limitations</h2>
+  <ul>
+    <li>Incorrect data can produce unreliable results.</li>
+    <li>AI models may contain bias.</li>
+    <li>Medication safety can be complex.</li>
+    <li>Patient privacy must be protected.</li>
+    <li>Professional oversight and clinical validation are essential.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>7. Technologies Used</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>HTML</h3>
+      <p>Creates the structure and content of the website.</p>
+    </div>
+    <div class="card">
+      <h3>CSS</h3>
+      <p>Provides the colors, layout, and responsive design.</p>
+    </div>
+    <div class="card">
+      <h3>JavaScript</h3>
+      <p>Makes the educational demonstration interactive.</p>
+    </div>
+  </div>
+  <p style="margin-top:18px">
+    Note: This prototype uses predefined rules and sample data.
+    It does not use a trained machine-learning model or a medical database.
+  </p>
+</section>
+
+<section id="conclusion">
+  <h2>8. Conclusion</h2>
+  <p>
+    An AI Drug Recommendation System demonstrates how Artificial
+    Intelligence may help organize healthcare information and support
+    clinical decision-making. Responsible systems require accurate data,
+    careful testing, privacy safeguards, and qualified professional review.
+    AI should assist healthcare professionals rather than replace them.
+  </p>
+</section>
+
+<footer>
+  <h3>MedAI - AI Drug Recommendation System</h3>
+  <p>College Assignment Project</p>
+  <p>Educational demonstration only. Not a medical prescribing tool.</p>
+  <p>© <span id="year"></span> Student Project</p>
+</footer>
+
+<script>
+function analyzeData() {
+  const topic = document.getElementById("topic").value;
+  const profile = document.getElementById("profile").value;
+
+  const topics = {
+    fever: {
+      title: "Fever Information",
+      description: "This sample belongs to general fever education. A symptom alone cannot establish a diagnosis or determine suitable medication.",
+      next: "Educational information could cover symptom monitoring and when to seek medical care."
+    },
+    headache: {
+      title: "Headache Information",
+      description: "This sample belongs to headache education. The cause of a headache cannot be determined from this selection alone.",
+      next: "Educational information could explain warning signs and the importance of professional assessment."
+    },
+    allergy: {
+      title: "Medication Allergy Safety",
+      description: "This topic is flagged for safety review. The demo cannot identify a safe medicine or assess a real allergy.",
+      next: "A real clinical system would need verified allergy information and validated safety checks."
+    },
+    interaction: {
+      title: "Drug Interaction Safety",
+      description: "This topic is flagged for interaction review. The demo does not check actual medicines or determine whether a combination is safe.",
+      next: "A real system would need a reliable, updated interaction database."
+    }
+  };
+
+  const profiles = {
+    general: "General educational example",
+    allergy: "Known allergy needs professional review",
+    multiple: "Multiple medicines need professional review"
+  };
+
+  const selectedTopic = topics[topic];
+  const needsReview =
+    topic === "allergy" ||
+    topic === "interaction" ||
+    profile === "allergy" ||
+    profile === "multiple";
+
+  document.getElementById("result").innerHTML = `
+    <h3>${selectedTopic.title}</h3>
+    <p><strong>Sample profile:</strong> ${profiles[profile]}</p>
+    <p>${selectedTopic.description}</p>
+    <p><strong>Educational next step:</strong> ${selectedTopic.next}</p>
+    <p><strong>Classification:</strong>
+      ${needsReview ? "Professional safety review highlighted" : "Educational information"}
+    </p>
+    <p><strong>Method:</strong> Predefined JavaScript rules using sample data.</p>
+    <p><strong>Important:</strong> This is not a diagnosis, prescription,
+    or real AI prediction.</p>
+  `;
+}
+
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
